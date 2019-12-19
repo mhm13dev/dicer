@@ -112,3 +112,17 @@ function startGame() {
   btnNewGame = document.querySelector(".js-btn-new-game");
   btnNewGame.addEventListener("click", newGameEvent);
 }
+
+var imgs = [];
+var imgUrls = [
+  "../img/dice-1.png",
+  "../img/dice-2.png",
+  "../img/dice-3.png",
+  "../img/dice-4.png",
+  "../img/dice-5.png",
+  "../img/dice-6.png"
+];
+for (i = 0; i < imgUrls.length; i++) {
+  imgs.push(new Image());
+  imgs[i].src = imgUrls[i];
+}
