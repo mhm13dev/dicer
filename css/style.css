@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ededed;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.4; }
+
+.container {
+  width: 80%;
+  height: 85vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); }
+
+.player {
+  grid-row: 1 / 5;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center; }
+  .player-left {
+    grid-column: 1 / 4; }
+  .player-right {
+    grid-column: 4 / -1; }
+  .player__info {
+    align-self: end;
+    text-align: center;
+    padding: 1rem 2rem; }
+  .player__name {
+    font-size: 3.5rem;
+    text-transform: uppercase; }
+  .player__turn {
+    font-size: 1.5rem;
+    visibility: hidden;
+    background-color: #eb4d4d;
+    color: #fff;
+    margin: 0 auto; }
+  .player .winner {
+    padding: 1rem 2rem; }
+  .player__total-score {
+    color: #fff;
+    font-size: 8rem;
+    font-weight: 300;
+    background-color: #eb4d4d;
+    padding: 2rem 3rem;
+    border-radius: 50rem; }
+  .player__current {
+    background-color: #eb4d4d;
+    padding: 2rem 5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0.3rem; }
+  .player__current-score {
+    font-size: 3.5rem; }
+
+.winner {
+  background-color: #fff;
+  color: #eb4d4d;
+  font-size: 3.5rem;
+  text-transform: uppercase; }
+
+.btn {
+  grid-column: 3 / 5;
+  display: block;
+  justify-self: center;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #eb4d4d;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem 0;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #fd6666; }
+  .btn-new-game {
+    grid-row: 1 / 2;
+    align-self: start; }
+  .btn-roll {
+    grid-row: 3 / 4;
+    align-self: end; }
+  .btn-hold {
+    grid-row: 4 / 5;
+    align-self: start;
+    margin: 0; }
+
+.roll-img {
+  width: 18rem;
+  display: block;
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25); }
+
+.active {
+  background-color: #ededed; }
+  .active .player__turn {
+    visibility: visible; }
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.3);
+  transition: all 0.2s ease 0.3s; }
+  .welcome__container {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ededed;
+    border-radius: 0.4rem; }
+  .welcome__heading {
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 400; }
+    .welcome__heading-dicer {
+      color: #eb4d4d;
+      font-weight: 500;
+      border-bottom: 0.3rem solid #eb4d4d;
+      border-radius: 0.3rem; }
+  .welcome__rules-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    background-color: #fd6666;
+    color: #fff; }
+  .welcome__rules-list {
+    width: 70%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    font-size: 1.8rem;
+    line-height: 1.6; }
+  .welcome__rules-item:not(:last-child) {
+    margin-bottom: 1.4rem; }
+  .welcome__rules-item-notice {
+    color: #eb4d4d;
+    font-size: 2rem;
+    border-bottom: 0.2rem solid #eb4d4d;
+    border-radius: 0.2rem; }
+  .welcome__btn-start-game {
+    margin: 0 auto;
+    animation: popup 1s ease infinite; }
+
+.show-welcome {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); }
+
+@keyframes popup {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+/*# sourceMappingURL=style.css.map */
