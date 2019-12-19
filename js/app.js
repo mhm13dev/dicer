@@ -92,7 +92,7 @@ function startGame() {
   totalScore = [0, 0];
   currentScore = 0;
   currentActive = 0;
-  winningScore = 20;
+  winningScore = 100;
 
   document.querySelector(".js-total-score-0").textContent = 0;
   document.querySelector(".js-total-score-1").textContent = 0;
